@@ -1,0 +1,11 @@
+{
+  "private": "true",
+  "name": "ridefi-monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kunal Jain <64953335+kunal528@users.noreply.github.com>",
+  "license": "MIT",
+  "workspaces": [
+   "apps/*"
+ ]
+}
