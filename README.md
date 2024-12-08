@@ -74,15 +74,12 @@ RideFi is a **blockchain-powered travel platform** designed to provide a seamles
 3. **Security**:
    - Blockchain ensures tamper-proof travel data and wallet security.
 
-4. **Sustainability**:
-   - A paperless system contributing to a greener environment.
-
 ---
 
 ## **Technical Highlights**
 
 1. **Blockchain Infrastructure**:
-   - Built on **Ethereum** or **Polygon** for scalability, low gas fees, and security.
+   - Built on **Base** for scalability, low gas fees, and security.
    - Smart contracts manage entry, exit, and fare calculations.
 
 2. **QR Code Integration**:
@@ -120,3 +117,11 @@ Alice experiences a seamless, cashless, and ticketless journey.
 ---
 
 RideFi positions itself as a **pioneering decentralized travel solution** with the potential to revolutionize the way people commute. Let us know if you'd like additional refinements!
+
+
+## Contract:
+
+- RideFiToken: [https://base-sepolia.blockscout.com/address/0x291EeB7b8D97dCDf088fea71a054cA6CEAA67A01](https://base-sepolia.blockscout.com/address/0x291EeB7b8D97dCDf088fea71a054cA6CEAA67A01)
+- RideFiSystem: [https://base-sepolia.blockscout.com/address/0xb4c74D97C78919151829ea2FC745609f8315Cd47](https://base-sepolia.blockscout.com/address/0xb4c74D97C78919151829ea2FC745609f8315Cd47)
+
+
