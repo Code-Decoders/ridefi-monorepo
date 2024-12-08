@@ -4,6 +4,7 @@ import { auth, getUserData, logout } from "../_lib/firebase";
 
 export default function RideFiApp() {
     const [activeTab, setActiveTab] = useState(0);
+    const [logs, setLogs] = useState([]);
 
     const [user, setUser] = useState()
 
@@ -14,6 +15,13 @@ export default function RideFiApp() {
                 console.log(user)
                 setUser(user);
             });
+            fetch("https://base-sepolia.blockscout.com/api/v2/addresses/0xb4c74D97C78919151829ea2FC745609f8315Cd47/logs").then(async (val) => {
+                const data = await val.json();
+                console.log(data.items.filter((val) => val.decoded.method_id === "75e269e1"))
+                setLogs(data.items.filter((val) => val.decoded.method_id === "75e269e1"));
+            })
+
+
         }
     }, [auth, auth?.currentUser]);
 
@@ -78,18 +86,10 @@ export default function RideFiApp() {
                                 Recent Transactions
                             </h2>
                             <ul className="space-y-4">
-                                <li className="flex justify-between items-center border-b pb-2 text-gray-600">
-                                    <span>Ride to Downtown</span>
-                                    <span className="font-medium text-green-500">- $10.00</span>
-                                </li>
-                                <li className="flex justify-between items-center border-b pb-2 text-gray-600">
-                                    <span>Ride to Airport</span>
-                                    <span className="font-medium text-green-500">- $25.00</span>
-                                </li>
-                                <li className="flex justify-between items-center text-gray-600">
-                                    <span>Ride to Mall</span>
-                                    <span className="font-medium text-green-500">- $12.50</span>
-                                </li>
+                                {logs.map((val, index) => (<li key={index} className="flex justify-between items-center border-b pb-2 text-gray-600">
+                                    <span>Ride {val.decoded.parameters[1].value} mils</span>
+                                    <span className="font-medium text-green-500">- ${val.decoded.parameters[2].value}</span>
+                                </li>))}
                             </ul>
                             <button className="mt-4 px-4 py-2 bg-cyan-500 text-white rounded-lg shadow hover:bg-cyan-600 transition-all w-full">
                                 View All Transactions
