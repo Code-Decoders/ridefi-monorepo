@@ -1,7 +1,6 @@
 "use server"
 import { Coinbase, Wallet } from '@coinbase/coinbase-sdk'
-import { SystemAddress, SystemAbi, TokenAddress, TokenAbi } from '../api/abi';
-import BigNumber from 'bignumber.js';
+import { SystemAddress, TokenAddress, TokenAbi } from '../api/abi';
 
 export async function createWallet() {
     try {

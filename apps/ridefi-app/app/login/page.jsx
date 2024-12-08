@@ -23,7 +23,6 @@ export default function Login() {
                     Welcome Back
                 </h2>
                 <form onSubmit={handleLogin}>
-                    {/* Email */}
                     <div className="mb-4">
                         <label
                             htmlFor="email"
@@ -68,7 +67,7 @@ export default function Login() {
 
                 {/* Link to Signup */}
                 <p className="text-sm text-center text-gray-600 mt-6">
-                    Don't have an account?{" "}
+                    Dont have an account?{" "}
                     <a href="/signup" className="text-teal-500 font-medium">
                         Sign Up
                     </a>

@@ -3,7 +3,7 @@
 import { getUserData } from "@/app/_lib/firebase";
 import { useState } from "react";
 import { QrReader } from "react-qr-reader";
-import { useParams, useRouter } from 'next/navigation'
+import { useParams } from 'next/navigation'
 
 
 export default function MetroStationScanner() {

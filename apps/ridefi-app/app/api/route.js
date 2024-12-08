@@ -1,8 +1,8 @@
 // /Users/kunal/Documents/NextJSProjects/ridefi-monorepo/apps/ridefi-app/app/api/route.js
 
-import { Coinbase, readContract, Wallet } from "@coinbase/coinbase-sdk";
+import { Coinbase, Wallet } from "@coinbase/coinbase-sdk";
 import { NextResponse } from "next/server";
-import { SystemAddress, TokenAbi, TokenAddress, SystemAbi } from './abi'
+import { SystemAddress, SystemAbi } from './abi'
 
 
 // export async function GET(request) {

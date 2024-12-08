@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import { auth, createUser } from "../_lib/firebase";
+import { createUser } from "../_lib/firebase";
 
 
 export default function Signup() {
